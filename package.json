@@ -1,7 +1,7 @@
 {
-  "name": "portfolio",
-  "version": "0.1.0",
-  "homepage": "https://mellostar25.github.io/portfolio",
+  "name": "dhruv-soni-portfolio",
+  "version": "1.0.0",
+  "homepage": "https://sonidhruv1272.github.io/Dhruv-s-Personal-Portfolio-Website/",
   "private": true,
   "dependencies": {
     "@react-pdf/renderer": "^2.2.0",
@@ -46,8 +46,7 @@
     ],
     "development": [
       "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+      "last 1 firefox version"
     ]
   }
 }
