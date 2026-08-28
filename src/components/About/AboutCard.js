@@ -1,39 +1,60 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
-import { ImPointRight } from "react-icons/im";
 
 function AboutCard() {
   return (
-    <Card className="quote-card-view">
-      <Card.Body>
-        <blockquote className="blockquote mb-0">
-          <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple">Harsh Shukla </span>
-            from <span className="purple"> Ontario, Canada</span>
-            <br />
-            I am currently in My Second year of Software Engineering at McMaster University.
-            <br />
-            I have previously worked as a Software Developer Intern at <span className="purple">Site4U</span> 
-            <br />
-            <br />
-            Apart from coding, some other activities that I love to do!
-          </p>
-          <ul>
-            <li className="about-activity">
-              <ImPointRight /> Playing Games
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Motorsports
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Watching Movies
-            </li>
-          </ul>
-
-       
-        </blockquote>
-      </Card.Body>
-    </Card>
+    <div className="quote-card-view">
+      <p style={{ textAlign: "justify" }}>
+        Hi Everyone, I am <span className="purple">Dhruv Soni</span> from
+        Toronto, Canada.
+        <br />
+        <br />
+        I am currently pursuing a{" "}
+        <b className="purple">
+          Bachelor of Engineering in Computer Engineering (Co-op)
+        </b>{" "}
+        at York University.
+        <br />
+        <br />
+        I am passionate about{" "}
+        <b className="purple">
+          embedded systems, robotics, IoT, and software development
+        </b>
+        , especially where hardware and software come together to build
+        practical and intelligent systems.
+        <br />
+        <br />
+        Through my academic projects and engineering teams, I have gained
+        hands-on experience working with{" "}
+        <b className="purple">
+          microcontrollers, Arduino, ESP32, PCB design, sensor integration,
+          servo and motor control, and real-time embedded programming
+        </b>
+        .
+        <br />
+        <br />
+        I am currently involved with the{" "}
+        <b className="purple">York University Robotics Society</b>, where I
+        contribute to the development of an autonomous Sumobot using embedded
+        C++, ultrasonic and infrared sensors, and real-time motor control.
+        <br />
+        <br />
+        I am also involved with the{" "}
+        <b className="purple">IEEE YorkU Student Branch</b>, where I have
+        worked on PCB prototypes, microcontroller-based systems, circuit
+        validation, soldering, debugging, and hardware testing.
+        <br />
+        <br />
+        I enjoy solving technical problems, debugging systems, and learning
+        through hands-on experimentation. I believe the best way to understand
+        engineering is to build something, test it, identify what does not
+        work, and continuously improve it.
+        <br />
+        <br />
+        Outside of engineering, I enjoy exploring new technologies, working on
+        personal projects, and developing my technical skills through
+        experimentation and independent learning.
+      </p>
+    </div>
   );
 }
 
