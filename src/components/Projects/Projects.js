@@ -1,117 +1,84 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
-import Particle from "../Particle";
-import sevahub from "../../Assets/Projects/sevahub.png";
-import eduglow from "../../Assets/Projects/eduglow.png";
-import rigor from "../../Assets/Projects/rigor.png";
-import robotics from "../../Assets/Projects/robotics.webp";
-import personal from "../../Assets/Projects/personal.png";
-import ecohub from "../../Assets/Projects/ecohub.png";
-import cybersecurity from "../../Assets/Projects/cybersecurity.png";
-import memorylane from "../../Assets/Projects/MemoryLane.png";
-import badge from "../../Assets/Projects/badge.png";
 
 function Projects() {
   return (
     <Container fluid className="project-section">
-      <Particle />
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+          My Recent <strong className="purple">Works</strong>
         </h1>
-        <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
+
+        <p
+          style={{
+            color: "white",
+            textAlign: "center",
+            fontSize: "1.1em",
+            paddingBottom: "20px",
+          }}
+        >
+          Here are some of the engineering, embedded systems, robotics, and
+          software projects I have built.
         </p>
+
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
-          <ProjectCard
-              imgPath={badge}
-              isBlog={false}
-              title="Badge"
-              description="Badge is a web-based professional networking platform designed for hackathons, conferences, and career fairs. It uses AI-powered identity extraction, vector embeddings, and 3D visualization to help attendees make meaningful connections based on professional compatibility rather than superficial metrics."
-              ghLink="https://github.com/RajanChavada/Badge"
-              demoLink="https://devpost.com/software/badge"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-          <ProjectCard
-              imgPath={ecohub}
-              isBlog={false}
-              title="EcoHub"
-              description="EcoHub provides eco-friendly activities and rewards users with EcoCoins for their participation and positive environmental impact."
-              ghLink="https://github.com/Harsh-Is-Coding/terrahacks"
-              demoLink="https://devpost.com/software/ecohub-ry6n8o"
-            />
-          </Col>
+
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={memorylane}
               isBlog={false}
-              title="Memory Lane"
-              description="Memory Lane is a user-friendly web application designed to help individuals with memory impairments by recognizing and identifying faces. It serves as a virtual assistant to connect users with their loved ones effortlessly."
-              demoLink="https://devpost.com/software/memory-lane-dhke7c?ref_content=user-portfolio&ref_feature=in_progress"
-              ghLink="https://github.com/PakmanGames/deltahacks11"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={sevahub}
-              isBlog={false}
-              title="SevaHub"
-              description="Seva Hub focuses on providing volunteering access to more people and connecting coordinators and volunteers with each other"
-              ghLink="https://devpost.com/software/seva-hub"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={eduglow}
-              isBlog={false}
-              title="EduGlow"
-              description="EduGlow is an innovative platform that transforms text prompts into interactive Google Slides and flashcards"
-              ghLink="https://github.com/tsangh5/EduGlow"
-              demoLink="https://devpost.com/software/eduglow"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={rigor}
-              isBlog={false}
-              title="Rigor"
-              description="Track your calories, get custom workout plans, and view progress. Rigor is the all-in-one fitness application that you need to achieve your dream self"
-              ghLink="https://github.com/SachinVedGupta/Rigor"
-              demoLink="https://sachinvedgupta.github.io/Rigor/index.html"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={cybersecurity}
-              isBlog={false}
-              title="CyberSecure System"
-              description="A cutting-edge cybersecurity system featuring facial recognition login, a secure password manager, and encrypted file sharing to ensure privacy and data protection."
-              ghLink="https://www.linkedin.com/posts/harsh-shukla-2005hs_engineeringexcellence-cybersecurityinnovation-activity-7264444646985027584-Mh1v?utm_source=share&utm_medium=member_desktop"
+              title="Autonomous Sumobot Robot"
+              description="An autonomous competition robot developed as part of the York University Robotics Society. The system uses embedded C++ with Arduino, ultrasonic and infrared sensors, and real-time motor control to detect opponents, identify arena boundaries, and make autonomous movement decisions. Through iterative testing and control tuning, the system achieved a 35% improvement in competition win-rate, reduced collision and edge-detection errors by 40%, and reduced motor response latency from 120ms to 70ms."
+              ghLink="https://github.com/sonidhruv1272"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={robotics}
               isBlog={false}
-              title="Vex Robotics"
-              description="Developed a Vex Robotics robot which included a automous mode and a driver controlled mode"
-              ghLink="https://github.com/JayPrograms/Robot-Routing-Program"
+              title="Smart Doorbell System"
+              description="An IoT-based smart doorbell developed using an ESP32-CAM, Arduino C++, Wi-Fi communication, and the Blynk platform. The system detects doorbell events and sends real-time notifications to a connected mobile device with less than 2 seconds of response latency. It also supports remote monitoring and device control, combining embedded firmware, cloud communication, and hardware-software integration into a practical smart-home system."
+              ghLink="https://github.com/sonidhruv1272"
             />
           </Col>
+
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={personal}
               isBlog={false}
-              title="Personal Website"
-              description="This is my personal website that I created using React"
-              ghLink="https://github.com/Harsh-Is-Coding/portfolio"
+              title="Fingerprint Door Lock System"
+              description="A biometric access-control system built with Arduino, a fingerprint sensor, and a servo-based locking mechanism. Embedded C++ handles fingerprint enrollment, authentication, input validation, and physical lock control, achieving approximately 98% verification accuracy during testing. Optimized PWM control and timing reduced the unlock response time to under one second while authentication logic reduced invalid authentication events by 25%."
+              ghLink="https://github.com/sonidhruv1272"
             />
           </Col>
-          
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              isBlog={false}
+              title="PCB Design Project"
+              description="A printed circuit board design project focused on component placement, trace routing, power distribution, circuit simulation, and hardware optimization. The design process identified and corrected more than 10 issues before implementation while optimized routing and component placement improved routing efficiency and reduced signal noise by approximately 30%. Power and component placement strategies were also used to improve overall circuit stability and thermal performance."
+              ghLink="https://github.com/sonidhruv1272"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              isBlog={false}
+              title="Automated Plant Watering System"
+              description="An automated plant irrigation system developed using Arduino and MATLAB to monitor soil moisture and control a water pump. The system combines a soil moisture sensor, microcontroller, MOSFET-based pump control, and MATLAB monitoring to automate watering based on plant conditions. The project provided hands-on experience with sensor integration, data monitoring, hardware control, and software-hardware communication."
+              ghLink="https://github.com/sonidhruv1272"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              isBlog={false}
+              title="Personal Portfolio Website"
+              description="A responsive personal portfolio website developed with React and hosted through GitHub Pages. The website presents my Computer Engineering background, embedded systems experience, robotics work, technical skills, and engineering projects in a centralized professional portfolio. It is designed to give recruiters and employers a clear overview of my technical experience, projects, GitHub activity, and professional profile."
+              ghLink="https://github.com/sonidhruv1272"
+              demoLink="https://sonidhruv1272.github.io/"
+            />
+          </Col>
+
         </Row>
       </Container>
     </Container>
