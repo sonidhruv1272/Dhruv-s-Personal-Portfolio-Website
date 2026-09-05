@@ -1,32 +1,52 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
 import {
-  SiVisualstudiocode,
-  SiPostman,
-  SiSlack,
-  SiVercel,
-  SiMacos,
+  SiArduino,
+  SiMatlab,
+  SiPycharm,
+  SiIntellijidea,
+  SiEclipseide,
+  SiGit,
+  SiGithub,
 } from "react-icons/si";
 
 function Toolstack() {
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiMacos />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiVisualstudiocode />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiPostman />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiSlack />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiVercel />
-      </Col>
-    </Row>
+    <div className="tech-icons">
+      <div className="tech-icon">
+        <SiArduino />
+        <p>Arduino IDE</p>
+      </div>
+
+      <div className="tech-icon">
+        <SiMatlab />
+        <p>MATLAB</p>
+      </div>
+
+      <div className="tech-icon">
+        <SiPycharm />
+        <p>PyCharm</p>
+      </div>
+
+      <div className="tech-icon">
+        <SiIntellijidea />
+        <p>IntelliJ IDEA</p>
+      </div>
+
+      <div className="tech-icon">
+        <SiEclipseide />
+        <p>Eclipse</p>
+      </div>
+
+      <div className="tech-icon">
+        <SiGit />
+        <p>Git</p>
+      </div>
+
+      <div className="tech-icon">
+        <SiGithub />
+        <p>GitHub</p>
+      </div>
+    </div>
   );
 }
 
