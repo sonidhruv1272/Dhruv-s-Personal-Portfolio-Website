@@ -2,92 +2,78 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
+import pdf from "../../Assets/DhruvSoni_Resume.pdf";
+
 import { AiOutlineDownload } from "react-icons/ai";
 
+import { Document, Page, pdfjs } from "react-pdf";
+import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+import "react-pdf/dist/esm/Page/TextLayer.css";
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+
 function ResumeNew() {
+  const [width, setWidth] = React.useState(1200);
+
+  React.useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <Container fluid className="resume-section">
-      <Particle />
+    <div>
+      <Container fluid className="resume-section">
+        <Particle />
 
-      <Container>
-        <Row style={{ justifyContent: "center", position: "relative" }}>
-          <Col
-            md={8}
-            className="resume-about"
-            style={{
-              paddingTop: "50px",
-              paddingBottom: "50px",
-            }}
-          >
-            <h1 className="project-heading">
-              My <strong className="purple">Resume</strong>
-            </h1>
-
-            <p
+        <Container>
+          <Row style={{ justifyContent: "center", position: "relative" }}>
+            <Button
+              variant="primary"
+              href={pdf}
+              target="_blank"
               style={{
-                color: "white",
-                textAlign: "center",
-                fontSize: "1.1em",
-                padding: "20px",
+                maxWidth: "250px",
+                marginBottom: "20px",
               }}
             >
-              You can view or download my full resume below, which includes my
-              education, technical experience, engineering projects, and
-              skills in Computer Engineering, embedded systems, robotics,
-              hardware, and software development.
-            </p>
+              <AiOutlineDownload />
+              &nbsp;View / Download Resume
+            </Button>
+          </Row>
 
-            <div
+          <Row className="resume">
+            <Col md={12}>
+              <Document file={pdf}>
+                <Page
+                  pageNumber={1}
+                  scale={width > 786 ? 1.7 : 0.6}
+                />
+              </Document>
+            </Col>
+          </Row>
+
+          <Row style={{ justifyContent: "center", position: "relative" }}>
+            <Button
+              variant="primary"
+              href={pdf}
+              target="_blank"
               style={{
-                display: "flex",
-                justifyContent: "center",
-                paddingBottom: "30px",
+                maxWidth: "250px",
+                marginTop: "20px",
               }}
             >
-              <Button
-                variant="primary"
-                href="/resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiOutlineDownload />
-                &nbsp; View / Download Resume
-              </Button>
-            </div>
-          </Col>
-        </Row>
-
-        <Row
-          style={{
-            justifyContent: "center",
-            position: "relative",
-            paddingBottom: "50px",
-          }}
-        >
-          <Col md={10}>
-            <div
-              style={{
-                width: "100%",
-                height: "1000px",
-                overflow: "hidden",
-              }}
-            >
-              <iframe
-                src="/resume.pdf"
-                title="Dhruv Soni Resume"
-                width="100%"
-                height="100%"
-                style={{
-                  border: "none",
-                  borderRadius: "8px",
-                  backgroundColor: "white",
-                }}
-              />
-            </div>
-          </Col>
-        </Row>
+              <AiOutlineDownload />
+              &nbsp;View / Download Resume
+            </Button>
+          </Row>
+        </Container>
       </Container>
-    </Container>
+    </div>
   );
 }
 
